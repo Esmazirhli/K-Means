@@ -163,6 +163,3 @@ result = df.groupby(['cluster','Gender','Married']).agg(mean_age=('Age', 'mean')
 
 # Gruplar incelendiğinde 2-3-4 numaralı kümelerin birleştirilebileceği görüntüleniyor bu nedenle replace işlemi ile tek küme haline getirilmesi
 df["cluster"] = df["cluster"].replace({1: 2, 2: 3, 4: 3, 3: 3, 5: 1})
-
-# Dosyanın csv formatında dışa aktarılması
-df = pd.read_csv(".....\Customer_Segment.csv")
